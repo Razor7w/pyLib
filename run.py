@@ -1,3 +1,12 @@
+# Compatible con python 2 por el encoding
+# encoding: utf-8
+# Ideas para mejorar el código
+# 1) Buscar algun criterio para saber si el codigo se ejecuta en windows o linux
+# 2) Tener la opción de salir de cualquiera de las opciones seleccionadas
+# 3) Tener los textos y mensajes en una capa aparte del código
+# 4) mejorar validaciones y optimizar código (se que es muy general, pero muchos if - else pueden desaparecer por ejemplo)
+# 5) Transformar funcionalidad que se repiten la mayoria de veces en el código
+# 6) .-
 import os #utilizado para limpiar pantalla
 import re #utilizado para funciones regex
 menu = 0
@@ -13,6 +22,11 @@ registros = []
 
 consulta_paciente = []
 consulta_registro = []
+# Agregar funcionalidad, preguntar que s.o estoy ejecutando  el código
+def limpiar_consola_windows():
+  os.system('cls')
+def limpiar_consola_linux():
+  os.system('clear')
 
 def registrar_paciente():
   os.system('cls')
